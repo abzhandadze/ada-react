@@ -1,0 +1,8 @@
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: Build and test the server app
+            image: node:latest
+            script:
+              - git push https://heroku:62eaa938-87ad-41db-b903-f73839d99d61@git.heroku.com/adashopge-react.git HEAD

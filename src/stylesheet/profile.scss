@@ -1,0 +1,539 @@
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.profile{
+    margin: 0 auto;
+    width: 1500px;
+    display: flex;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    position: relative;
+    padding-top: 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin-top: 80px;
+
+
+      
+   
+
+
+
+
+    &>h1{
+        position: absolute;
+        top: 30px;
+        left: 0;
+        font-family: med;
+        font-size: 35px;
+        width: 100%;
+        text-align: center;
+        color: #222;
+
+    }
+
+    .profile-accordion{
+        // background-color: khaki;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1)!important;
+        margin-bottom: 20px;
+        &::before{
+            display: none;
+        }
+
+        .order-item-box{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .MuiIconButton-edgeEnd{
+            margin: initial;
+        }
+
+        .MuiAccordionSummary-root{
+            padding: initial!important;
+
+            .MuiAccordionSummary-content{
+                margin: 0;
+            }
+
+            .order-up{
+                // background-color: lawngreen;
+            }
+        }
+    }
+}
+
+.profil-ul{
+    width:fit-content;
+    margin-right:75px;
+    margin-top: 26px;
+
+    li{
+        font-size: 16px;
+        font-family: med;
+        color:#26262641;
+        white-space: nowrap;
+        margin-bottom: 30px;
+        text-align: right;
+        border-right: solid 3px white;
+        padding-right: 37px;
+        line-height: 28px;
+        cursor: pointer;
+        &.active{
+        border-right: solid 3px #2682ec;
+        color: #262626;
+        }
+    }
+}
+
+.profile-recovery,
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    display: none;
+    padding-left: 88px;
+    border-left: solid 1px #D1D1D1;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    width: 100%;
+    max-width: 650px;
+    &.active{
+        display: flex;
+    }
+    
+    input{
+        width: 100%;
+        height: 45px;
+        font-size: 15px;
+        font-family: reg;
+        color:#262626;
+        border: solid 1px #D5D5D5;
+        padding-left: 20px;
+        background-color:#F5F5F5;
+        margin-bottom: 20px;
+        &::placeholder{
+        color:#262626;
+        }
+    }
+
+    button{
+        width: 360px;
+        height: 54px;
+        font-size: 18px;
+        font-family: med;
+        color:white;
+        background-color: #2682ec;
+        &:hover{
+            background-color: #fcb700;
+        }
+    }
+}
+
+
+.input-box{
+    width: 100%;
+    // margin-bottom: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .done{
+        position: absolute;
+        top: 15px;
+        color: rgb(38, 204, 38);
+        right: 16px;
+    }
+    span{
+        font-size: 14px;
+        font-family: reg;
+        color: #666;
+        margin-bottom: 3px;
+    }
+
+    .error-message{
+        // position: absolute;
+        left: 0;
+        color: #cc1414;
+        font-size: 13px;
+        font-family: reg;
+        // bottom: -18px;
+        margin-top: 5px;
+    }
+
+    &>input{
+        width: 100%;
+        padding-left: 10px;
+        height: 45px;
+        border: 1px solid #e6e6e6;
+        font-family: reg;
+        font-size: 14px;
+        color: #222;
+        margin-bottom: initial;
+        &::placeholder{
+            color: rgba(34, 34, 34, 0.597);
+        }
+        &:focus{
+            border-color: black;
+        }
+    }
+}
+
+
+
+.profile-order{
+    display: none;
+    width: 100%;
+    padding-left: 42px;
+    border-left: solid 1px #D1D1D1;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    &.active{
+        display: flex;
+        flex-direction: column;
+    }
+   
+}
+
+.order-item{
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: solid 1px white;
+
+    .makeStyles-root-1{
+        margin-top: initial!important;
+    }
+
+    &.active{
+        display: flex;
+        border: solid 1px #E3E3E3;
+        overflow: hidden;
+        box-shadow: 0px 10px 12px -5px rgba(0,0,0,0.05);
+    }
+}
+.order-up{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 66px;
+    position: relative;
+    // box-shadow: 0px 10px 12px -5px rgba(0,0,0,0.05);
+    padding-left: 18px;
+    cursor: pointer;
+    &.active{
+        box-shadow: initial;
+        // background-color: #F8F8F8;
+        
+    
+    &>i{
+        transform: rotate(-180deg);
+    }
+    }
+
+    &>i{
+        position: absolute;
+        right: 24px;
+        font-size:17px;
+    }
+
+    .box{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        // background-color: red;
+
+        div{
+            margin-left: 39px;
+            display: flex;
+        }
+    }
+
+    .print-btn{
+        right: 30px;
+        z-index: 555;
+        pointer-events: stroke;
+        margin-left: 20px;
+        margin-right: 30px;
+        background-color: initial;
+        &:hover{
+            i{
+                color: #2682ec;
+            }
+        }
+    }
+
+    .total-price{
+            font-size: 16px;
+            font-family: semi;
+            display: flex;
+            p{
+                font-family: reg;
+            }
+    }
+}
+.num{
+    width: 40px;
+    height: 40px;
+    @include flex();
+    font-size:17px;
+    font-family: med;
+    color: white;
+    background-color: #0566d2;
+}
+
+.dat{
+    font-size:16px;
+    font-family: med;
+    color: #262626;
+    margin-left: 39px;
+}
+
+.order-down{
+display: none;
+height: fit-content;
+width: 100%;
+transform: translateY(-100%);
+&.active{
+    transform: translateY(0);
+}
+}
+
+.order-down-item{
+    display: grid;
+    grid-template-columns: 80px 1fr 100px 100px 100px;
+    grid-gap: 20px;
+    align-items: center;
+    padding-top: 10px;
+    width: 100%;
+    border-top: solid 1px #E3E3E3;
+   
+
+    .total{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+        &>span{
+            font-size: 12px;
+            color: #222;
+            justify-content: end;
+            font-family: med;
+            opacity: 0.6;
+            white-space: nowrap;
+            margin-bottom: 5px;
+            font-feature-settings: 'case';
+        }
+
+        p{
+            font-size: 20px;
+            color: #2682ec;
+            justify-content: end;
+            font-family: bold;
+        .lari{
+            font-size: 13px;
+        }
+    }
+    }
+    .price{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        &>span{
+            font-size: 12px;
+            color: #222;
+            justify-content: end;
+            font-family: med;
+            opacity: 0.6;
+            white-space: nowrap;
+            font-feature-settings: 'case';
+            margin-bottom: 5px;
+        }
+        p{
+            font-size: 20px;
+            color: #222;
+            justify-content: end;
+            font-family: bold;
+            .lari{
+                font-size: 13px;
+            color: #422F70;
+
+            }
+        }
+       
+    }
+    .quantity{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        &>span{
+            font-size: 12px;
+            color: #222;
+            justify-content: end;
+            font-family: med;
+            opacity: 0.6;
+            margin-bottom: 5px;
+            font-feature-settings: 'case';
+        }
+        p{
+            font-size: 20px;
+            color: #222;
+            justify-content: end;
+            font-family: bold;
+        }
+    }
+ 
+    .name {
+        font-size: 15px;
+        font-family: med;
+        color: #222;
+        display: flex;
+        flex-direction: column-reverse;
+        padding-right: 30px;
+        span{
+            color: #2682ec;
+        }
+    }
+    img{
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+    }
+}
+
+
+@media only screen and (max-width: 1600px) {
+    .profile{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .profile{
+        flex-direction: column;
+    }
+
+    .profil-ul{
+        display: flex;
+        margin-bottom: 50px;
+        margin-left: -5px;
+
+        li{
+            background-color: #2682ec;
+            color: white;
+            padding: 10px 15px;
+            border: initial;
+            margin: 0 5px;
+
+            &.active{
+                background-color: #fcb700;
+                color: white;
+                border: initial;
+
+            }
+        }
+    }
+    
+    .profile-recovery,.profile-info,.profile-order{
+        border: initial;
+        padding-left: initial;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .profile{
+        padding: 20px;
+        padding-top: 100px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .order-up{
+        .box{
+            flex-direction: column;
+            align-items:flex-start;
+            padding-right: 50px;
+           div{
+               margin-bottom: 10px;
+           }
+        }
+
+        .print-btn{
+            position: absolute;
+            right: 10px;
+            top: 0;
+            bottom: 0;
+            margin: initial;
+        }
+
+        .dat{
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .profil-ul{
+        flex-direction: column;
+        width: 100%;
+        border-bottom: 2px solid #222;
+        margin-bottom: 10px;
+        margin-left: initial;
+
+        li{
+            margin: initial;
+            width: 100%;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    }
+
+    .profile-recovery button, .profile-info button{
+        width: 100%;
+    }
+
+    .order-down-item{
+        display: flex;
+        flex-wrap: wrap;
+
+        .price.total,.quantity{
+            flex: 3;
+        }
+    }
+    .order-down-item .name{
+        width: calc(100% - 100px);
+    }
+   
+}
+
+
+@media only screen and (max-width: 550px) {
+    .order-up  .dat{
+        margin-left: 20px;
+        font-size: 13px;
+
+    }
+
+    .order-up .box {
+        padding-right: 40px;
+        div{
+            margin-left: 20px;
+    
+            .total-price{
+                font-size: 13px;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

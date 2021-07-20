@@ -1,0 +1,242 @@
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin bef {
+    content: '';
+    display: block;
+}
+
+
+// .product {
+//     display: flex;
+//     width: 1500px;
+//     height: auto;
+//     justify-content: space-between;
+//     margin: 0 auto;
+//     position: relative;
+//     background-color: white;
+//     padding: 30px;
+//     border-radius: 5px;
+// }
+.product.product-lf{
+    padding: 0;
+}
+
+///////////// filter //////////
+.filter-open-btn {
+    display: none;
+    background-color: white;
+}
+
+.product-filter {
+    min-width: 300px;
+    max-width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0, .1);
+    border-radius: 10px;
+    padding: 20px;
+    // padding-bottom: 0;
+
+
+    .filter-select{
+        &:last-of-type{
+            margin-bottom: initial;
+        }
+    }
+}
+
+.makeStyles-root-1{
+    max-width: 225px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.filter-select {
+    border-bottom: solid 1px #eee;
+    margin-bottom: 30px;
+
+    &:first-child {
+        border-top: initial;
+    }
+
+    .procheck {
+        display: none;
+
+        &:checked+label {
+            &::after {
+                background-color: #2682ec;
+            }
+        }
+    }
+
+    .filter-label {
+        font-size: 14px;
+        color: #3F3F3F;
+        font-family: reg;
+        display: flex;
+        cursor: pointer;
+        margin-bottom: 10px;
+        position: relative;
+        &:hover{
+            color: #0566d2;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+        &::after{
+            @include bef();
+            width: 11px;
+            height: 11px;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+        }
+        &::before {
+            @include bef();
+            width: 17px;
+            min-width: 17px;
+            height: 17px;
+            background-color: white;
+            margin-right: 10px;
+            transition: 0.3s;
+            border: solid 1px #222;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.filter-btn {
+    height: 19px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    &.active {
+        i {
+            transform: rotate(180deg);
+        }
+    }
+
+    h2 {
+        font-size: 16px;
+        color: #111111;
+        display: block;
+        font-family: med;
+        text-transform: uppercase;
+    }
+
+    i {
+        color: #222;
+        transition: 0.3s;
+        font-size: 15px;
+
+    }
+}
+
+.open-filter {
+    transition: 0s;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    transition: 0s;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    &.slider-open-filter{
+        overflow: hidden;
+        justify-content: center;
+        transition: 0s;
+    }
+    &.active{
+        max-height: 400px;
+        transition: max-height 0.3s ease-in;
+    }
+
+
+    .PrivateValueLabel-offset-4{
+        font-size: 9px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+      
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+       
+    &::-webkit-scrollbar-thumb {
+        background: #888; 
+    }
+      
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+
+    &.active {
+        display: block !important;
+    }
+
+    label{
+        &:last-of-type{
+            padding-bottom: 30px;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .product-filter{
+        overflow-y: auto;
+        max-height: 100vh;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        padding: 30px;
+        transform: translateX(-2000px);
+        opacity: 0;
+        max-width: 80%;
+        &.active{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    .filter-open-btn{
+        display: flex;
+        border: solid 1px #222;
+        padding: 5px 10px;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        align-items: center;
+        p{
+            text-transform: uppercase;
+            font-family: med;
+            font-size: 18px;
+        }
+
+        i{
+            margin-left: 15px;
+        }
+    }
+}
+
+///////////// filter //////////
+
+

@@ -1,0 +1,283 @@
+/* ========== Main Carousel Styles ========== */
+.main-carousel-section {
+    width: 1500px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    position: relative;
+}
+
+.swiper-container.main-carousel-slider {
+    margin: 0 20px;
+    margin-right: initial;
+    width: 100%;
+    // height: 524px;
+    min-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+
+
+    .main-carousel-slider-pagination {
+        position: absolute;
+        bottom: 30px;
+        z-index: 99;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            width: 40px;
+            border-radius: 5px;
+        }
+    }
+  
+
+    .swiper-slide {
+        width: 100%;
+        position:relative;
+        height: 100%;
+        padding: 47px 30px 0 62px;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-family: med;
+            color: #222222;
+            color: white;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        h1,h2 {
+            font-size: 48px;
+            font-family: reg;
+            color: #0566d2;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+        }
+
+        p {
+            color: rgb(34, 34, 34);
+            color: white;
+            font-size: 18px;
+            font-family: reg;
+        }
+
+        a {
+            background-color: #0566d2;
+            width: 192px;
+            height: 52px;
+            border-radius: 25px;
+            color: white;
+            font-size: 13px;
+            font-family: reg;
+            position: absolute;
+            bottom: 118px;
+            &:hover {
+               background-color: #2682ec;
+            }
+        }
+    }
+}
+
+/* ========== Big Sales Styles ========== */
+.big-sale-box{
+    .big-sale{
+        width: 335px;
+        // height: 252px;
+        height: calc(50% - 10px);
+        margin-bottom: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 30px;
+        box-shadow: 0px 0px 15px rgba(210, 217, 237, .7);
+        background-color: white;
+        &:last-child{
+            margin-bottom: initial;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            object-fit: cover;
+        }
+
+        h3,h2{
+            font-size: 24px;
+            font-family: reg;
+            color: #a7352d;
+            margin-bottom: 5px;
+            z-index: 2;
+        }
+        h3{
+            color: #222222;
+        }
+        p{
+            font-size: 18px;
+            font-family: reg;
+            color: #222222;
+            z-index: 2;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .main-carousel-section {
+        width: 90%;
+    }
+
+    .big-sale-box .big-sale{
+        width: 270px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .big-sale-box .big-sale{
+        width: 185px;
+        height: 139px;
+        height: calc(50% - 10px);
+        padding: 15px;
+
+        h2,h3{
+            font-size: 14px;
+        }
+      
+        p{
+            font-size: 14px;
+            margin-top: 15px;
+        }
+    }
+
+    .swiper-container.main-carousel-slider{
+        .swiper-slide{
+            padding: 47px 30px 0 32px;
+
+            h1,h2{
+                font-size: 30px;
+            }
+            p{
+                font-size: 16px;
+                max-width: 80%;
+            }
+
+            a{
+                bottom: 80px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+
+    .swiper-container.main-carousel-slider .swiper-slide a {
+        width: 162px;
+        height: 37px;
+    }
+
+    .swiper-container.main-carousel-slider .swiper-slide h3 {
+        margin-bottom: 15px;
+    }
+
+    .swiper-container.main-carousel-slider .swiper-slide h2, .swiper-container.main-carousel-slider .swiper-slide h1 {
+        font-size: 26px;
+    }
+    .swiper-container.main-carousel-slider {
+        height: 350px;
+        margin-left: initial;
+    }
+
+    .swiper-container.main-carousel-section{
+        height: 350px;
+        margin-left: initial;
+    }
+
+    .swiper-container.main-carousel-section .swiper-slide{
+        padding: 20px 30px 0 32px;
+
+        h3{
+            margin-bottom: 15px;
+        }
+        h2,h1{
+            font-size: 26px;
+        }
+
+        a{
+            width: 162px;
+            height: 37px;
+        }
+    }
+
+    .swiper-container.main-carousel-slider .swiper-slide {
+        padding: 20px 30px 0 32px;
+    }
+
+    .main-carousel-section{
+        padding-top: 52px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .main-carousel-section {
+        flex-direction: column;
+    }
+
+    .big-sale-box {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .big-sale {
+            height: 200px;
+            width: calc(50% - 10px);
+            margin-bottom: initial;
+
+            h3,h2{
+                font-size: 22px;
+            }
+
+            p{
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    .main-carousel-section{
+        margin-top:70px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .big-sale-box .big-sale h3, .big-sale-box .big-sale h2{
+        font-size: 16px;
+    }
+    .big-sale-box .big-sale p{
+        font-size: 14px;
+    }
+    .big-sale-box .big-sale{
+        height: 150px;
+        width: calc(50% - 5px);
+    }
+}

@@ -1,0 +1,86 @@
+/* ========== Thre Banner Container Styles Styles ========== */
+.three-baner-box  {
+    width: 1500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0 20px;
+    margin: 50px auto;
+
+
+    .baner {
+        position: relative;
+        height: 220px;
+        padding: 30px;
+        border-radius: 3px;
+        font-family: reg;
+        color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+        }
+
+        h2,h3 {
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        span,p {
+            font-size: 17px;
+            opacity: .9;
+        }
+        p {
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+        span {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.836);
+            position: absolute;
+            bottom: 30px;
+
+        }
+    }
+}
+
+@media only screen and (max-width: 1600px)  {
+    .three-baner-box {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1100px)  {
+    .three-baner-box .baner {
+        height: 180px;
+        padding: 15px;
+    }
+    .three-baner-box .baner h2, .three-baner-box .baner h3 {
+        font-size:2vw;
+        line-height: 140%;
+    }
+    .three-baner-box .baner span, .three-baner-box .baner p {
+        font-size: 80%;
+    }
+    .three-baner-box .baner p {
+        margin-top: 15px;
+    margin-bottom: 29px;
+    }
+}
+
+@media only screen and (max-width: 700px)  {
+    .three-baner-box {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .three-baner-box .baner h2, .three-baner-box .baner h3 {
+        font-size:4vw;
+    }
+}
